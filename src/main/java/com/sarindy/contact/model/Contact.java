@@ -48,7 +48,7 @@ public class Contact {
 	private int lastModifiedBy;
 
 	@Column(name = "last_modified_date")
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss")
 	private Date lastModifiedDate;
 
