@@ -4,13 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 import com.sarindy.contact.model.Contact;
 import com.sarindy.contact.services.ContactServiceImpl;
 import com.sarindy.responseCode.ResponseCodeModel;
 
 @SpringBootApplication
-public class ContactApplication implements CommandLineRunner {
+public class ContactApplication extends SpringBootServletInitializer implements CommandLineRunner {
+	//public class ContactApplication extends SpringBootServletInitializer implements CommandLineRunner {
 
 	@Autowired
 	private ContactServiceImpl contactServiceImpl;
@@ -25,17 +28,23 @@ public class ContactApplication implements CommandLineRunner {
 
 		SpringApplication.run(ContactApplication.class, args);
 	}
+	
+	/*@Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(ContactApplication.class);
+    }*/
 
 	@Override
 	public void run(String... args) throws Exception {
 
-		 contactServiceImpl.addContact("Mr", "Sarindy", "Ouk",
-		 "sarindy@dnynn.com", "012719971", "Phnom Penh", 0);
-		contactModel.setId(2);
-		contactModel.setAddress("Battambang");
+		contactServiceImpl.addContact("Mr", "Sarindy", "Ouk", "sarindy@dnynn.com", "012719971", "Phnom Penh", 0);
+		//contactModel.setId(2);
+		//contactModel.setAddress("Battambang");
 
 		//responseCodeModel = contactServiceImpl.updateContact(contactModel);
-		System.out.println(responseCodeModel.toString());
+		//System.out.println(responseCodeModel.toString());
 
 	}
+
+	
 }
