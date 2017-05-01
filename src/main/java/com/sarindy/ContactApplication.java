@@ -37,7 +37,7 @@ public class ContactApplication extends SpringBootServletInitializer implements 
 	@Override
 	public void run(String... args) throws Exception {
 
-		contactServiceImpl.addContact("Mr", "Sarindy", "Ouk", "sarindy@dnynn.com", "012719971", "Phnom Penh", 0);
+		//contactServiceImpl.addContact("Mr", "Sarindy", "Ouk", "sarindy@dnynn.com", "012719971", "Phnom Penh", 0);
 		//contactModel.setId(2);
 		//contactModel.setAddress("Battambang");
 

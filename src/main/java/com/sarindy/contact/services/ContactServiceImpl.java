@@ -1,6 +1,8 @@
 package com.sarindy.contact.services;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -102,6 +104,15 @@ public class ContactServiceImpl implements ContactService {
 			logger.error(err);
 			return new ResponseCodeModel("999", "System Error : " + e.getMessage(), contact.getLastModifiedBy());
 		}
+	}
+
+	@Override
+	public List<Contact> getAllContact() {
+		List<Contact> contact =new ArrayList<>();
+		contactRepository.findAll().forEach(contact::add);
+		
+		
+		return contact;
 	}
 
 }
