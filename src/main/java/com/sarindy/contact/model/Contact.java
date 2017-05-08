@@ -16,6 +16,8 @@ import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name = "contact")
 @Component
@@ -49,7 +51,7 @@ public class Contact {
 
 	@Column(name = "last_modified_date")
 	@Temporal(TemporalType.TIMESTAMP)
-	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm:ss")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+7")
 	private Date lastModifiedDate;
 
 	@Column(name = "deleted")
@@ -152,7 +154,7 @@ public class Contact {
 	}
 
 	public Date getLastModifiedDate() {
-		return new Date();
+		return lastModifiedDate;
 	}
 
 	public void setLastModifiedDate(Date lastModifiedDate) {

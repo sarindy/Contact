@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 import com.sarindy.contact.model.Contact;
@@ -29,10 +28,7 @@ public class ContactApplication extends SpringBootServletInitializer implements 
 		SpringApplication.run(ContactApplication.class, args);
 	}
 	
-	/*@Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(ContactApplication.class);
-    }*/
+	
 
 	@Override
 	public void run(String... args) throws Exception {
