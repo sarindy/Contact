@@ -1,27 +1,13 @@
 package com.sarindy;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
-import com.sarindy.contact.model.Contact;
-import com.sarindy.contact.services.ContactServiceImpl;
-import com.sarindy.responseCode.ResponseCodeModel;
-
 @SpringBootApplication
 public class ContactApplication extends SpringBootServletInitializer implements CommandLineRunner {
 	//public class ContactApplication extends SpringBootServletInitializer implements CommandLineRunner {
-
-	@Autowired
-	private ContactServiceImpl contactServiceImpl;
-
-	@Autowired
-	private Contact contactModel;
-
-	@Autowired
-	private ResponseCodeModel responseCodeModel;
 
 	public static void main(String[] args) {
 

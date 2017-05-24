@@ -10,8 +10,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@Autowired
-	private RoleRepository roleRepo;
+	
 
 	// @RequestMapping(value = { "/", "/login" }, method = RequestMethod.GET)
 	// public ModelAndView login() {

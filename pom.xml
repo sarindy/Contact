@@ -5,8 +5,8 @@
 
 	<groupId>com.sarindy</groupId>
 	<artifactId>Contact</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<version>1.0</version>
+	<packaging>jar</packaging>
 
 	<name>Contact</name>
 	<description>Contact Application</description>
